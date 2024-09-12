@@ -1,0 +1,63 @@
+@import url(style.css);
+.container {
+  padding: 2vh 8vw 18vh;
+}
+
+.work {
+  line-height: 1.7;
+}
+
+.work .work-title-box {
+  text-align: center;
+}
+
+.work .work-img {
+  text-align: center;
+}
+
+.work img {
+  width: 80%;
+}
+
+.work .worktext-box {
+  margin: 3rem;
+}
+
+.work .category1 {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #555;
+}
+
+.work .category2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #555;
+}
+
+.work .work-title {
+  font-size: 1.5rem;
+  margin: 1.2rem 0 6rem;
+  letter-spacing: 0.1rem;
+}
+
+.work .concept,
+.work .point {
+  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.work .concept-text {
+  margin-bottom: 3rem;
+}
+
+.work .flex-img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  text-align: center;
+}
+
+.work .flex-img .square {
+  max-width: 400px;
+}
+/*# sourceMappingURL=work.css.map */

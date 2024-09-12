@@ -1,0 +1,403 @@
+@charset "utf-8";
+$pink: #be5164;
+$yellow: #f2d399;
+$lightpink: #fae9d7;
+$lightyellow: #faf1e0;
+$text: rgb(63, 63, 63);
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  // letter-spacing: .1rem;
+  color: $text;
+  // line-height: 2;
+}
+/* ===============================================
+# スクロールしたらonクラスが付与される処理（jQuery）
+=============================================== */
+
+body {
+  font-family: "", "Noto Sans JP", sans-serif;
+  transition: 0.3s;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
+}
+body.on {
+  // background: linear-gradient(-45deg, $lightyellow, $lightpink);
+  z-index: 20;
+}
+
+header.on {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ===============================================
+# 共通
+=============================================== */
+section {
+  line-height: 1.5;
+}
+
+.section-ttl {
+  color: $text;
+}
+
+a {
+  transition: 0.3s;
+}
+
+/* ===============================================
+# 
+=============================================== */
+.mainvisual {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mainvisual.on {
+  animation: fade 1s ease forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+header {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  z-index: 10;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 10vh;
+  margin: 0 auto;
+  .logo {
+    display: grid;
+    place-items: center;
+    .pc {
+      width: 17vw;
+      min-width: 100px;
+    }
+    .sp {
+      display: none;
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .nav-list {
+      display: flex;
+      gap: 4vw;
+    }
+  }
+}
+main {
+  padding-top: 10vh;
+}
+.mainvisual {
+  background-image: url(../images/IMG_3907.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .mv_ttl,
+  .mv_name {
+    color: #fff;
+  }
+  .mv_ttl {
+    font-size: clamp(1.2rem, 3vw, 7rem);
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .mv_name {
+    font-size: clamp(3rem, 15vw, 15rem);
+  }
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 18vh 8vw 18vh;
+  .section-ttl {
+    text-align: center;
+    font-size: clamp(4rem, 10vw, 7rem);
+    margin-bottom: 12vw;
+    font-weight: normal;
+  }
+}
+/* ===============================================
+# works
+=============================================== */
+.works{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 90px;
+  .work {
+    max-width: 500px;
+
+    .category1 {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: #555;
+    }
+    .category2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: #555;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+  a .work-img {
+    transition: 0.3s;
+  }
+  a:hover .work-img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  .work:nth-child(1) {
+    margin-bottom: 4rem;
+  }
+  .work:nth-child(2) {
+    margin-bottom: 4rem;
+  }
+  .work-ttl {
+    line-height: 2;
+  }
+}
+/* ===============================================
+# skills
+=============================================== */
+.skills-section {
+  .skills-ttl {
+    color: $text;
+  }
+  background: $lightyellow;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6vw;
+
+  .skills-item {
+    display: flex;
+    gap: 30px;
+    width: calc((100% - 6vw) / 2);
+  }
+  .skill-text {
+    .skill-name {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      margin-bottom: 1.5vw;
+    }
+  }
+}
+
+.no-image {
+  opacity: 0;
+}
+
+.another_z-index {
+  position: relative;
+  z-index: 0;
+  .another {
+    color: rgb(117, 75, 19);
+    margin: 7vw auto 0;
+    max-width: 70%;
+    background: $yellow;
+    padding: 3rem 4rem;
+    position: relative;
+    border-radius: 5px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      top: 20%;
+      left: 3%;
+      z-index: -1;
+    }
+  }
+}
+/* ===============================================
+# about
+=============================================== */
+
+.about {
+  .me {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    position: relative;
+
+    .name-box {
+      font-size: clamp(1rem, 5vw, 7rem);
+      .fullname {
+        font-weight: normal;
+      }
+
+      .ro-maji {
+        font-size: clamp(0.3rem, 2vw, 3rem);
+        display: block;
+        margin-top: 0.5rem;
+      }
+      .birthday {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+      }
+    }
+    .my-image {
+      width: 20vw;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .profile_sentence {
+    padding: 13vh 5vw 0;
+    line-height: 3;
+  }
+}
+
+/* ===============================================
+# Photography
+=============================================== */
+.photography-section {
+  background: $lightyellow;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: 380px;
+    height: 220px;
+    padding: 20px;
+    filter: grayscale(100%);
+    object-fit: cover;
+    transition: 0.7s ease;
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(1.2);
+    }
+  }
+}
+
+/* ===============================================
+# footer
+=============================================== */
+footer {
+  background: $yellow;
+  text-align: center;
+  padding-bottom: 4rem;
+  .footer-text {
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===============================================
+# JS
+=============================================== */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s, transform 1s;
+}
+.fade.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ===============================================
+# テスト
+=============================================== */
+/* ===============================================
+# TBサイズ
+=============================================== */
+@media (max-width: 768px) {
+  .about .kitahara .my-image {
+    width: 30vw;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    .skills-item {
+      width: 100%;
+    }
+  }
+}
+/* ===============================================
+# SPサイズ
+=============================================== */
+@media (max-width: 480px) {
+  .header-inner .logo {
+    .pc {
+      display: none;
+    }
+    .sp {
+      display: block;
+      width: 7vh;
+    }
+  }
+  .container {
+    max-width: 480px;
+  }
+
+  .works {
+    flex-direction: column;
+  }
+  .logo {
+    width: 30vw;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    .skills-item {
+      width: 100%;
+    }
+  }
+
+  .about {
+    .me {
+      display: block;
+      .name-box {
+        text-align: center;
+      }
+      .my-image {
+        width: 45vw;
+        margin: 3rem auto 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio | riko kitahara - 作品名</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/work.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+
+    <!-- /#header -->
+
+    <main>
+      <section>
+        <div class="container">
+          <h2 class="section-ttl">Work</h2>
+          <div class="work">
+            <div class="work-img">
+              <img src="images/mocup-top-l.png" alt="" />
+            </div>
+            <!-- /.work-img -->
+            <div class="worktext-box">
+              <div class="work-title-box">
+                <p class="category1">webサイト</p>
+                <p class="category2">デザイン/コーディング</p>
+                <h3 class="work-title">
+                  ポートフォリオサイト（レスポンシブ対応）
+                </h3>
+              </div>
+              <!-- /.work-title-box -->
+              <!-- /.work-ttl -->
+              <h4 class="concept">課題とコンセプト</h4>
+              <!-- /.concept -->
+              <p class="concept-text">
+                自身の就職活動の際のポートフォリオサイトとして作成しました。<br />
+                ポートフォリオ作成ツールも多種多様なものがありますが、現状の自身の能力でポートフォリオサイトを作成できると感じた為、デザインからコーディング、公開まで一貫して行いました。
+              </p>
+              <!-- /.concept -->
+              <h4 class="point">工夫した点</h4>
+              <!-- /.point -->
+              <p class="point-text">
+                作品を見ていただくことが一番の目的なので、作品と簡単な説明が一つの塊として並ぶようレイアウトしました。シンプルでありながも相手にどのような人物なのか伝える手段として、趣味のお菓子作りやカメラなどの写真を使用することにより自身の個性もアピールしました。
+                ページ内リンクへの挙動も滑らかに仕上げました。
+                作品は画像をクリックすると個別ページにて詳細を見れるようにしました。
+                最後のセクションであるPhotographyは趣味で撮った写真をギャラリーとして配置しています。モーダルウィンドウはjQueryのプラグインのLightboxを使用しています。
+                実際に数ページを作成していると、ページごとにヘッダーなど共通で使うパーツはもっと効率的にできないのかという疑問が出てきました。初めは同じ記述を使い回していましたが自身で調べてみた結果、さまざまな方法があるのだという気づきがありました。その中で今の私でも実装できそうな方法を選び、共通部分を部品化してサイトの作成をしました。今回はjQueryのload()メソッドを使用しました。
+              </p>
+              <!-- /.point -->
+            </div>
+            <!-- /.worktext -->
+          </div>
+          <!-- /.work -->
+        </div>
+        <!-- /.container -->
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer-text">ご連絡の際は下記アドレスまでお願い致します。</p>
+      <p class="mail">kitaharariko2255@gmail.com</p>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

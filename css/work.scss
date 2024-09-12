@@ -1,0 +1,56 @@
+@import url(style.css);
+
+// .inner {
+//   // margin: 0;
+// }
+
+.container {
+  padding: 2vh 8vw 18vh;
+}
+
+.work {
+  .work-title-box {
+    text-align: center;
+  }
+  line-height: 1.7;
+
+  .work-img {
+    text-align: center;
+  }
+  img {
+    width: 80%;
+  }
+  .worktext-box {
+    margin: 3rem;
+  }
+  .category1 {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #555;
+  }
+  .category2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: #555;
+  }
+  .work-title {
+    font-size: 1.5rem;
+    margin: 1.2rem 0 6rem;
+    letter-spacing: 0.1rem;
+  }
+  .concept,
+  .point {
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+  .concept-text {
+    margin-bottom: 3rem;
+  }
+  .flex-img {
+    transform: scale(0.8);
+    text-align: center;
+    .square {
+      max-width: 400px;
+    }
+  }
+}
